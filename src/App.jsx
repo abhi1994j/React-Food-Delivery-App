@@ -18,7 +18,7 @@ function App() {
       {/* <Home/> */}
       {/* <Footer/> */}
       <Router>
-      {/* <Navbar/> */}
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quote" element={<Quote/>} />
@@ -26,6 +26,7 @@ function App() {
         <Route path='/foods' element={<Foods/>}/>
         <Route path='/contact' element={<Contact/>}/>
       </Routes>
+      <Footer/>
     </Router>
      
     </>
