@@ -6,15 +6,19 @@ const Home = () => {
   return (
     <>
       <div className="home min-h-[100vh] w-[100%]">
-        <div className="bg-[url('https://images.unsplash.com/photo-1595526051245-4506e0005bd0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]  bg-cover bg-center w-full px-4 md:px-8 py-8 md:py-20">
-          <div className="hero-container max-w-xl text-center  ">
-            <h1 className="text-black text-3xl md:text-5xl font-extrabold mb-8">
+        <div className="relative w-full bg-cover bg-center bg-no-repeat bg-[url('https://images.unsplash.com/photo-1595526051245-4506e0005bd0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] px-4 md:px-8 py-8 md:py-20">
+          {/* Overlay using only opacity */}
+          <div className="absolute inset-0 bg-black/60 z-0"></div>
+
+          {/* Content */}
+          <div className="hero-container max-w-xl text-center flex items-center flex-col relative z-10 p-3">
+            <h1 className="text-white text-3xl md:text-5xl font-extrabold mb-8">
               Let us find your
-              <strong className="text-rose-700 block font-extrabold">
+              <strong className="text-rose-500 block font-extrabold">
                 Forever Food.
               </strong>
             </h1>
-            <p className="text-sm sm:text-lg md:text-xl mb-8 text-gray-100">
+            <p className="text-sm sm:text-lg md:text-xl text-center mb-8 text-gray-100">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
               deserunt labore magni quis consequuntur cum sequi fuga obcaecati!
             </p>
@@ -28,6 +32,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+
         <div className="w-[100%] px-4 md:px-8 py-18 md:py-20 grid grid-col-1 lg:grid-cols-2 h-auto">
           <div className="relative w-full z-10 lg:py-16">
             <div className="w-full h-64 sm:h-70 md:h-80 lg:h-100 relative">
@@ -57,160 +62,160 @@ const Home = () => {
           </div>
         </div>
         <div className="max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 mx-auto">
-            <div className="sm:columns-2 lg:columns-3 lg:gap-8 sm:gap-6">
-              <div className="card mb-4">
-                <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Inventore officiis sequi voluptate? Velit reiciendis facilis
-                  blanditiis illum dolorem saepe fugiat quibusdam ipsum
-                  asperiores eaque dolore, nihil quo? Excepturi, qui
-                  tempora.Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Eum sed laboriosam reiciendis praesentium illum atque
-                  laborum qui harum quisquam iste.
+          <div className="sm:columns-2 lg:columns-3 lg:gap-8 sm:gap-6">
+            <div className="card mb-4">
+              <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore officiis sequi voluptate? Velit reiciendis facilis
+                blanditiis illum dolorem saepe fugiat quibusdam ipsum asperiores
+                eaque dolore, nihil quo? Excepturi, qui tempora.Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Eum sed laboriosam
+                reiciendis praesentium illum atque laborum qui harum quisquam
+                iste.
+              </div>
+              <div className="card-footer px-2 flex gap-4">
+                <div className="writer w-12 h-12">
+                  <img
+                    src={Cardgirl}
+                    alt="writer"
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
-                <div className="card-footer px-2 flex gap-4">
-                  <div className="writer w-12 h-12">
-                    <img
-                      src={Cardgirl}
-                      alt="writer"
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  </div>
-                  <div className="employee">
-                    <p className="emp-name text-sm font-semibold text-gray-950 mb-1">
-                      Gladdis Lennon
-                    </p>
-                    <p className="emp-position text-gray-600 text-sm">
-                      Head of SEO
-                    </p>
-                  </div>
+                <div className="employee">
+                  <p className="emp-name text-sm font-semibold text-gray-950 mb-1">
+                    Gladdis Lennon
+                  </p>
+                  <p className="emp-position text-gray-600 text-sm">
+                    Head of SEO
+                  </p>
                 </div>
               </div>
-              <div className="card mb-4">
-                <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Inventore officiis sequi voluptate? Velit
+            </div>
+            <div className="card mb-4">
+              <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore officiis sequi voluptate? Velit
+              </div>
+              <div className="card-footer px-2 flex gap-4">
+                <div className="writer w-12 h-12">
+                  <img
+                    src={Cardgirl}
+                    alt="writer"
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
-                <div className="card-footer px-2 flex gap-4">
-                  <div className="writer w-12 h-12">
-                    <img
-                      src={Cardgirl}
-                      alt="writer"
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  </div>
-                  <div className="employee">
-                    <p className="emp-name text-sm font-semibold text-gray-950 mb-1">
-                      Gladdis Lennon
-                    </p>
-                    <p className="emp-position text-gray-600 text-sm">
-                      Head of SEO
-                    </p>
-                  </div>
+                <div className="employee">
+                  <p className="emp-name text-sm font-semibold text-gray-950 mb-1">
+                    Gladdis Lennon
+                  </p>
+                  <p className="emp-position text-gray-600 text-sm">
+                    Head of SEO
+                  </p>
                 </div>
               </div>
-              <div className="card mb-4">
-                <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Inventore officiis sequi voluptate? Velit reiciendis facilis
-                  blanditiis illum dolorem saepe fugiat quibusdam ipsum
-                  asperiores eaque dolore, nihil quo? Excepturi
+            </div>
+            <div className="card mb-4">
+              <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore officiis sequi voluptate? Velit reiciendis facilis
+                blanditiis illum dolorem saepe fugiat quibusdam ipsum asperiores
+                eaque dolore, nihil quo? Excepturi
+              </div>
+              <div className="card-footer px-2 flex gap-4">
+                <div className="writer w-12 h-12">
+                  <img
+                    src={Cardgirl}
+                    alt="writer"
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
-                <div className="card-footer px-2 flex gap-4">
-                  <div className="writer w-12 h-12">
-                    <img
-                      src={Cardgirl}
-                      alt="writer"
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  </div>
-                  <div className="employee">
-                    <p className="emp-name text-sm font-semibold text-gray-950 mb-1">
-                      Gladdis Lennon
-                    </p>
-                    <p className="emp-position text-gray-600 text-sm">
-                      Head of SEO
-                    </p>
-                  </div>
+                <div className="employee">
+                  <p className="emp-name text-sm font-semibold text-gray-950 mb-1">
+                    Gladdis Lennon
+                  </p>
+                  <p className="emp-position text-gray-600 text-sm">
+                    Head of SEO
+                  </p>
                 </div>
               </div>
-              <div className="card mb-4">
-                <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Inventore officiis sequi voluptate? Velit reiciendis facilis
-                  blanditiis illum dolorem saepe fugiat quibusdam ipsum
-                  asperiores eaque dolore, nihil quo? Excepturi,
+            </div>
+            <div className="card mb-4">
+              <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore officiis sequi voluptate? Velit reiciendis facilis
+                blanditiis illum dolorem saepe fugiat quibusdam ipsum asperiores
+                eaque dolore, nihil quo? Excepturi,
+              </div>
+              <div className="card-footer px-2 flex gap-4">
+                <div className="writer w-12 h-12">
+                  <img
+                    src={Cardgirl}
+                    alt="writer"
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
-                <div className="card-footer px-2 flex gap-4">
-                  <div className="writer w-12 h-12">
-                    <img
-                      src={Cardgirl}
-                      alt="writer"
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  </div>
-                  <div className="employee">
-                    <p className="emp-name text-sm font-semibold text-gray-950 mb-1">
-                      Gladdis Lennon
-                    </p>
-                    <p className="emp-position text-gray-600 text-sm">
-                      Head of SEO
-                    </p>
-                  </div>
+                <div className="employee">
+                  <p className="emp-name text-sm font-semibold text-gray-950 mb-1">
+                    Gladdis Lennon
+                  </p>
+                  <p className="emp-position text-gray-600 text-sm">
+                    Head of SEO
+                  </p>
                 </div>
               </div>
-              <div className="card mb-4">
-                <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Inventore officiis sequi voluptate? Velit reiciendis facilis
-                  blanditiis illum dolorem saepe fugiat quibusdam ipsum
-                  asperiores eaque dolore, nihil quo? Excepturi, qui tempora.
+            </div>
+            <div className="card mb-4">
+              <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore officiis sequi voluptate? Velit reiciendis facilis
+                blanditiis illum dolorem saepe fugiat quibusdam ipsum asperiores
+                eaque dolore, nihil quo? Excepturi, qui tempora.
+              </div>
+              <div className="card-footer px-2 flex gap-4">
+                <div className="writer w-12 h-12">
+                  <img
+                    src={Cardgirl}
+                    alt="writer"
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
-                <div className="card-footer px-2 flex gap-4">
-                  <div className="writer w-12 h-12">
-                    <img
-                      src={Cardgirl}
-                      alt="writer"
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  </div>
-                  <div className="employee">
-                    <p className="emp-name text-sm font-semibold text-gray-950 mb-1">
-                      Gladdis Lennon
-                    </p>
-                    <p className="emp-position text-gray-600 text-sm">
-                      Head of SEO
-                    </p>
-                  </div>
+                <div className="employee">
+                  <p className="emp-name text-sm font-semibold text-gray-950 mb-1">
+                    Gladdis Lennon
+                  </p>
+                  <p className="emp-position text-gray-600 text-sm">
+                    Head of SEO
+                  </p>
                 </div>
               </div>
-              <div className="card mb-4">
-                <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Inventore officiis sequi voluptate? Velit reiciendis facilis
-                  blanditiis illum dolorem saepe fugiat quibusdam ipsum
-                  asperiores eaque dolore, nihil quo? Excepturi, qui tempora.
+            </div>
+            <div className="card mb-4">
+              <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore officiis sequi voluptate? Velit reiciendis facilis
+                blanditiis illum dolorem saepe fugiat quibusdam ipsum asperiores
+                eaque dolore, nihil quo? Excepturi, qui tempora.
+              </div>
+              <div className="card-footer px-2 flex gap-4">
+                <div className="writer w-12 h-12">
+                  <img
+                    src={Cardgirl}
+                    alt="writer"
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
-                <div className="card-footer px-2 flex gap-4">
-                  <div className="writer w-12 h-12">
-                    <img
-                      src={Cardgirl}
-                      alt="writer"
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  </div>
-                  <div className="employee">
-                    <p className="emp-name text-sm font-semibold text-gray-950 mb-1">
-                      Gladdis Lennon
-                    </p>
-                    <p className="emp-position text-gray-600 text-sm">
-                      Head of SEO
-                    </p>
-                  </div>
+                <div className="employee">
+                  <p className="emp-name text-sm font-semibold text-gray-950 mb-1">
+                    Gladdis Lennon
+                  </p>
+                  <p className="emp-position text-gray-600 text-sm">
+                    Head of SEO
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </div>
     </>
   );
