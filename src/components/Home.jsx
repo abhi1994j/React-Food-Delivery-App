@@ -1,10 +1,13 @@
 import React from "react";
 import building from "../assets/building.png";
 import Cardgirl from "../assets/Card-image.png";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
     <>
+       <Navbar/>
       <div className="home min-h-[100vh] w-[100%]">
         <div className="bg-[url('https://images.unsplash.com/photo-1595526051245-4506e0005bd0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]  bg-cover bg-center w-full px-4 md:px-8 py-8 md:py-20">
           <div className="hero-container max-w-xl text-center  ">
@@ -212,6 +215,7 @@ const Home = () => {
             </div>
           </div>
       </div>
+      <Footer/>
     </>
   );
 };
