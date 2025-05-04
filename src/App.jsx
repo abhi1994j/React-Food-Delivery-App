@@ -7,6 +7,7 @@ import Quote from './components/Quote';
 import Resturants from './components/Resturants';
 import Foods from './components/Foods';
 import Contact from './components/Contact';
+import { PaginatedItems } from './components/PaginatedItems';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       {/* <Navbar/> */}
       {/* <Home/> */}
       {/* <Footer/> */}
-      <Router>
+      {/* <Router>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -27,8 +28,8 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
       </Routes>
       <Footer/>
-    </Router>
-     
+    </Router> */}
+     <PaginatedItems itemsPerPage={10} />
     </>
   )
 }

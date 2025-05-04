@@ -11,5 +11,23 @@ body{
   width: 100%;
   min-height: 100vh;
   scroll-behavior: smooth;
- 
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.pagination li {
+  padding: 5px 10px;
+  border: 1px solid hsl(0, 0%, 80%);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination li.active {
+  background-color: #007bff;
+  color: white;
 }
