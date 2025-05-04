@@ -1,6 +1,6 @@
 import users from "../dB/dB.json";
 
-const Quote = (props) => {
+const Quote = () => {
  
 
   return (

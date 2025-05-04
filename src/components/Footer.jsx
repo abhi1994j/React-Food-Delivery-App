@@ -28,12 +28,12 @@ const Footer = () => {
           <li><a href="">Projects</a></li>
           <li><a href="">Blog</a></li>
         </ul>
-        <div className="social-media-logo flex gap-6">
-          <FaFacebook className="h-6 w-6 transition hover:text-gray-700" />
-          <FaInstagram className="h-6 w-6 transition hover:text-gray-700" />
-          <FaTwitter className="h-6 w-6 transition hover:text-gray-700" />
-          <FaGithub className="h-6 w-6 transition hover:text-gray-700" />
-          <FaStackOverflow className="h-6 w-6 transition hover:text-gray-700" />
+        <div className="social-media-logo flex gap-4">
+          <FaFacebook className="h-5 text-gray-600 w-10 transition hover:text-gray-700" />
+          <FaInstagram className="h-5 text-gray-600 w-10 transition hover:text-gray-700" />
+          <FaTwitter className="h-5 text-gray-600 w-10 transition hover:text-gray-700" />
+          <FaGithub className="h-5 text-gray-600 w-10 transition hover:text-gray-700" />
+          <FaStackOverflow className="h-5 text-gray-600 w-10 transition hover:text-gray-700" />
         </div>
       </div>
     </div>

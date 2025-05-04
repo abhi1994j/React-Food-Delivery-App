@@ -49,7 +49,7 @@ const Home = () => {
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </h2>
-              <p className="text-gray-600 mb-6 text-sm sm:text-lg">
+              <p className="text-gray-500 mb-6 text-sm md:text-[16px]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
                 ipsum, error quae at fugit dolorem rem fugiat illo inventore
                 iusto exercitationem voluptas quisquam doloremque beatae, esse
@@ -64,7 +64,7 @@ const Home = () => {
         <div className="max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 mx-auto">
           <div className="sm:columns-2 lg:columns-3 lg:gap-8 sm:gap-6">
             <div className="card mb-4">
-              <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
+              <div className="card-body bg-gray-50 text-gray-500 px-6 py-6 rounded-xl mb-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Inventore officiis sequi voluptate? Velit reiciendis facilis
                 blanditiis illum dolorem saepe fugiat quibusdam ipsum asperiores
@@ -92,7 +92,7 @@ const Home = () => {
               </div>
             </div>
             <div className="card mb-4">
-              <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
+              <div className="card-body bg-gray-50 text-gray-500 px-6 py-4 rounded-xl mb-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Inventore officiis sequi voluptate? Velit
               </div>
@@ -115,7 +115,7 @@ const Home = () => {
               </div>
             </div>
             <div className="card mb-4">
-              <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
+              <div className="card-body bg-gray-50 text-gray-500 px-6 py-6 rounded-xl mb-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Inventore officiis sequi voluptate? Velit reiciendis facilis
                 blanditiis illum dolorem saepe fugiat quibusdam ipsum asperiores
@@ -140,7 +140,7 @@ const Home = () => {
               </div>
             </div>
             <div className="card mb-4">
-              <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
+              <div className="card-body bg-gray-50 text-gray-500 px-6 py-6 rounded-xl mb-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Inventore officiis sequi voluptate? Velit reiciendis facilis
                 blanditiis illum dolorem saepe fugiat quibusdam ipsum asperiores
@@ -165,7 +165,7 @@ const Home = () => {
               </div>
             </div>
             <div className="card mb-4">
-              <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
+              <div className="card-body bg-gray-50 text-gray-500 px-6 py-6 rounded-xl mb-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Inventore officiis sequi voluptate? Velit reiciendis facilis
                 blanditiis illum dolorem saepe fugiat quibusdam ipsum asperiores
@@ -190,7 +190,7 @@ const Home = () => {
               </div>
             </div>
             <div className="card mb-4">
-              <div className="card-body bg-gray-100 px-6 py-4 rounded-xl mb-4">
+              <div className="card-body bg-gray-50 text-gray-500 px-6 py-6 rounded-xl mb-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Inventore officiis sequi voluptate? Velit reiciendis facilis
                 blanditiis illum dolorem saepe fugiat quibusdam ipsum asperiores
