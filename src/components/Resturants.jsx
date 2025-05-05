@@ -8,14 +8,17 @@ import useDebounceValue from "../custom/useDebounceValue";
 
 const Resturants = () => {
   const [searchInput, setIssearchInput] = useState("");
+  const [searchStar, setIssearchStar] = useState("");
   const debouncedQuery = useDebounceValue(searchInput, 1000);
+  const debouncedStarQuery = useDebounceValue(searchStar, 1000);
   const [foodList, setFoodList] = useState(data);
-  const [flag, setFlag] = useState();
-  let star = "";
 
   function handleChange(e) {
     console.log(e.target.value);
     setIssearchInput(e.target.value);
+  }
+  function handleStarChange(e) {
+    setIssearchStar(e.target.value);
   }
 
   function handleSearch() {
@@ -31,8 +34,28 @@ const Resturants = () => {
       );
     });
     setFoodList(filterSearch);
-    setFlag(true);
   }
+
+  function handleSearchstar() {
+    if (!searchStar) {
+      setFoodList(data);
+      return;
+    }
+    const filterSearch = data.filter((item) => {
+      return item.rating.includes(searchStar) && item;
+    });
+    setFoodList(filterSearch);
+  }
+
+  useEffect(() => {
+    if (debouncedStarQuery) {
+      console.log("API call with:", debouncedStarQuery);
+      handleSearchstar(debouncedStarQuery); // for example
+    } else {
+      console.log("Search failed");
+      setFoodList(data);
+    }
+  }, [debouncedStarQuery]);
 
   useEffect(() => {
     if (debouncedQuery) {
@@ -43,6 +66,7 @@ const Resturants = () => {
       setFoodList(data);
     }
   }, [debouncedQuery]);
+
   return (
     <>
       <div className="resturants min-h-[100vh] w-[100%] p-6 ">
@@ -61,9 +85,9 @@ const Resturants = () => {
               <input
                 className="border rounded-sm border-gray-200 w-20 px-2 py-2 outline-0"
                 type="number"
-                name=""
-                value={""}
-                onChange={""}
+                name="star"
+                value={searchStar}
+                onChange={handleStarChange}
               />
             </div>
           </div>
@@ -83,7 +107,7 @@ const Resturants = () => {
                         {Array.from(
                           { length: Math.floor(item.rating) },
                           (_, i) => (
-                           <FaStar key={`full-${i}`} />
+                            <FaStar key={`full-${i}`} />
                           )
                         )}
                         {/* {item.rating % 1 !== 0 && <FaStarHalfAlt />} */}
