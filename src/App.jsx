@@ -18,7 +18,7 @@ function App() {
       {/* <Navbar/> */}
       {/* <Home/> */}
       {/* <Footer/> */}
-      {/* <Router>
+      <Router>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,8 +28,8 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
       </Routes>
       <Footer/>
-    </Router> */}
-     <PaginatedItems itemsPerPage={10} />
+    </Router>
+     {/* <PaginatedItems itemsPerPage={10} /> */}
     </>
   )
 }
