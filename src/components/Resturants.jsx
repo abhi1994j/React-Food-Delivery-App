@@ -11,6 +11,7 @@ const Resturants = () => {
   const debouncedQuery = useDebounceValue(searchInput, 1000);
   const [foodList, setFoodList] = useState(data);
   const [flag, setFlag] = useState();
+  let star = "";
 
   function handleChange(e) {
     console.log(e.target.value);
@@ -30,17 +31,16 @@ const Resturants = () => {
       );
     });
     setFoodList(filterSearch);
-    setFlag(true)
+    setFlag(true);
   }
 
   useEffect(() => {
     if (debouncedQuery) {
       console.log("API call with:", debouncedQuery);
       handleSearch(debouncedQuery); // for example
-    }
-    else{
+    } else {
       console.log("Search failed");
-      setFoodList(data)
+      setFoodList(data);
     }
   }, [debouncedQuery]);
   return (
@@ -57,10 +57,10 @@ const Resturants = () => {
               placeholder="Search restaurants..."
             />
             <div className="flex flex-col sm:flex-row items-center gap-2">
-              <span className="text-sm md:text-[16px]">Minimum Rating:</span>
+              1 <span className="text-sm md:text-[16px]">Minimum Rating:</span>
               <input
                 className="border rounded-sm border-gray-200 w-20 px-2 py-2 outline-0"
-                type="numbrt"
+                type="number"
                 name=""
                 value={""}
                 onChange={""}
@@ -69,7 +69,7 @@ const Resturants = () => {
           </div>
           <div className="w-full my-4 flex flex-wrap items-center [align-content:center] gap-6">
             {foodList.map((item) => {
-              // console.log(item);
+              console.log(item);
               return (
                 <div
                   key={item._id.$oid}
@@ -80,11 +80,13 @@ const Resturants = () => {
                     <div className="flex gap-2 items-center w-full mb-2">
                       <p className="text-lg font-semibold">{item.name}</p>
                       <span className="flex font-bold text-xl text-yellow-400">
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
+                        {Array.from(
+                          { length: Math.floor(item.rating) },
+                          (_, i) => (
+                           <FaStar key={`full-${i}`} />
+                          )
+                        )}
+                        {/* {item.rating % 1 !== 0 && <FaStarHalfAlt />} */}
                       </span>
                     </div>
                     <p className="flex gap-2 items-center mt text-gray-500 mb-2">
